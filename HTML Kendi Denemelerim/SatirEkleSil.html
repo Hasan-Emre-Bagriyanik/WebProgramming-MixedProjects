@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+  
+    <body>
+
+
+        <div class="contanier">
+            <table id="table" border="1" align="center" >
+                <tr>
+                    <td>Satır1 Sutün1</td>
+                    <td>Satır1 Sutün2</td>
+                </tr>
+                <tr>
+                    <td>Satır2 Sutün1</td>
+                    <td>Satır2 Sutün2</td>
+                </tr>
+                <tr>
+                    <td>Satır3 Sutün1</td>
+                    <td>Satır3 Sutün2</td>
+                </tr>
+            </table>
+            <center>
+                <button onclick="tableRowAdd()">Satır Ekle</button>
+                <button onclick="tableDeleteRow()">Satır Sil</button>
+            </center>
+        </div>
+
+
+        <script>
+
+            function tableRowAdd(){
+                var table = document.getElementById("table");
+                var row = table.insertRow(satirSayi);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+
+
+                cell1.style.backgroundColor = "green";
+                cell2.style.backgroundColor = "green";
+
+                var satir = document.getElementById("table").getElementsByTagName("tr");
+                var satirSayi = satir.length;
+
+                var sutun = document.getElementById("table").getElementsByTagName("td");
+                var sutunSayi = sutun.length;
+
+                cell1.innerHTML = "Sutün" + (satirSayi) + " Sutun1";
+                cell2.innerHTML = "Sutün" + (satirSayi) + " Sutün2";
+
+
+
+            }
+            function tableDeleteRow()
+            {
+                var table = document.getElementById("table");
+                var row = document.getElementById("table").getElementsByTagName("tr");
+
+                document.getElementById("table").deleteRow((row.length - 1));
+
+            }
+        </script>
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

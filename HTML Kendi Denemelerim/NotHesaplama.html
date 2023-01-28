@@ -1,0 +1,179 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+    <style>
+        .form input[type="text"], .form input[type="button"]{
+            display: block;
+            margin: 10px;
+            border: 1px solid black;
+            width: 250px;
+            padding: 10px;
+
+        }
+        #kisa1Error, #kisa2Error, #vizeError, #odevError, #finalError{
+            color: red;
+            font-size: 10px;
+
+        }
+    </style>
+
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="form">
+                <h1>Not Hesaplama</h1>
+                <input type="text" id="kisa1" name="kisa1" placeholder="Kısa Sınav 1 Notunuzu Giriniz...">
+                <span id="kisa1Error"></span>
+                <input type="text" id="vize" name="vize" placeholder="Vize Notunuzu Giriniz...">
+                <span id="vizeError"></span>
+                <input type="text" id="kisa2" name="kisa2" placeholder="Kısa Sınav 2 Notunuzu Giriniz...">
+                <span id="kisa2Error"></span>
+                <input type="text" id="odev" name="odev" placeholder="Ödev Notunuzu Giriniz...">
+                <span id="odevError"></span>
+                <input type="text" id="final" name="final" placeholder="Final Notunuzu Giriniz...">
+                <span id="finalError"></span>
+                <input type="button" id="btn" value="Hesapla">
+                <p id="ort"></p>
+                <p id="sonuc"></p>
+
+                
+            </div>
+        </div>
+
+
+        <script>
+
+            $(document).ready(function(){
+
+                var kisa1Error = true,
+                kisa2Error = true,
+                odevError = true,
+                vizeError = true,
+                finalError = true;
+
+                $("#btn").on('click',function(){
+                    var kisa1 =Number($("#kisa1").val());
+                    var vize = Number($("#vize").val());
+                    var kisa2 = Number($("#kisa2").val());
+                    var odev = Number($("#odev").val());
+                    var final = Number($("#final").val());
+
+                    if (kisa1 == ""  || kisa1 < 0  ||  kisa1 > 100){
+                        $("#kisa1Error").text("Lütfen notunuzu düzgün giriniz (0-100)");
+                        kisa1Error = true;
+                    }
+                    else{
+                        kisa1Error = false;
+                    }
+
+                    if(vize == ""  || vize < 0  || vize > 100){
+                        $("#vizeError").text("Lütfen notunuzu düzgün giriniz (0-100)");
+                        vizeError = true;
+                    }
+                    else{
+                        vizeError = false;
+                    }
+
+                    if(kisa2 == ""  || kisa2 < 0  || kisa2 > 100){
+                        $("#kisa2Error").text("Lütfen notunuzu düzgün giriniz (0-100)");
+                        kisa2Error = true;
+                    }
+                    else{
+                        kisa2Error = false;
+                    }
+
+
+                    if(odev == ""  || odev < 0  || odev > 100){
+                        $("#odevError").text("Lütfen notunuzu düzgün giriniz (0-100)");
+                        odevError = true;
+                    }
+                    else{
+                        odevError = false;
+                    }
+
+
+                    if(final == ""  || final < 0  || final > 100){
+                        $("#finalError").text("Lütfen notunuzu düzgün giriniz (0-100)");
+                        finalError = true;
+                    }
+                    else{
+                        finalError = false;
+                    }
+
+
+                    if(finalError == false &&  odevError == false &&  kisa2Error == false &&  vizeError == false &&  kisa1Error == false ){
+                        
+                        $("#kisa1Error").text("");
+                        $("#vizeError").text("");
+                        $("#kisa2Error").text("");
+                        $("#odevError").text("");
+                        $("#finalError").text("");
+
+                        $("#kisa1").val("");
+                        $("#kisa2").val("");
+                        $("#odev").val("");
+                        $("#vize").val("");
+                        $("#final").val("");
+                        
+                        
+                    var ortalama = ((kisa1*0.1)+(vize*0.2)+(kisa2*0.1)+(odev*0.1)+(final*0.5));
+                    $("#ort").text("Ortalamanız: " + ortalama);
+                    if(final >= 40){
+                        if(ortalama < 42){
+                        $("#sonuc").html("Harf Notunuz: FF   Kaldınız!!!");
+                        $("#sonuc").css({"color":"red"},{"fontSize":"24px"});
+                        }
+                        else if(42 <= ortalama && ortalama < 46){
+                            $("#sonuc").html("Harf Notunuz: DF   Koşullu Geçtiniz!!!" );
+                            $("#sonuc").css({"color":"orange"},{"fontSize":"24px"});
+                        }
+                        else if(46 <= ortalama && ortalama < 50 ){
+                            $("#sonuc").html("Harf Notunuz: DD   Koşullu Geçtiniz!!!");
+                            $("#sonuc").css({"color":"blue"},{"fontSize":"24px"});
+                        }
+                        else if(50 <= ortalama && ortalama < 58){
+                            $("#sonuc").html("Harf Notunuz: CC   Geçtiniz!!!");
+                            $("#sonuc").css({"color":"green"},{"fontSize":"24px"});
+                        }
+                        else if(58 <= ortalama && ortalama < 64){
+                            $("#sonuc").html("Harf Notunuz: CB   Geçtiniz!!!");
+                            $("#sonuc").css({"color":"blue"},{"fontSize":"24px"});
+                        }
+                        else if(64 <= ortalama && ortalama < 70){
+                            $("#sonuc").html("Harf Notunuz: BB   Geçtiniz!!!");
+                            $("#sonuc").css({"color":"purple"},{"fontSize":"24px"});
+                        }
+                        else if(70 <= ortalama && ortalama < 78){
+                            $("#sonuc").html("Harf Notunuz: BA   Geçtiniz!!!");
+                            $("#sonuc").css({"color":"black"},{"fontSize":"24px"});
+                        }
+                        else{
+                            $("#sonuc").html("Harf Notunuz: AA   Geçtiniz!!!");
+                            $("#sonuc").css({"color":"red"},{"fontSize":"24px"});
+                        }
+                    }
+                    else{
+                        $("#sonuc").html("Harf Notunuz: FF   Kaldınız!!!");
+                        $("#sonuc").css({"color":"red"},{"fontSize":"24px"});
+                    }
+                }
+            })
+        });
+        </script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>
+
+
+

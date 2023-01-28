@@ -1,0 +1,85 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+
+        <style>
+            .h1{
+                color: blue;
+            }
+            .rem{
+                margin-left: 5px;
+                background-color: white;
+                color: red;
+                border: none;
+                cursor: pointer;
+    
+            }
+        </style>
+    </head>
+    <body>
+
+ <!--   
+<script>
+        var sonuc = 0;
+        for (i=10; i<100; i++){
+            for(j=10; j<100; j++){
+                var carpim = i*j;
+                var ters = carpim.toString().split("").reverse().join("");
+                if(carpim == ters && carpim > sonuc){
+                    sonuc = carpim;
+                    document.write(sonuc + "<br>");
+
+                }
+            }
+        }
+        
+
+
+</script>
+
+   -->
+
+          
+        
+        <script>
+            
+            $(function() {
+                $("#add").on("click", function() {
+                var val = $("input").val();
+                if(val !=="") {
+                    var elem = $("<li></li>").text(val);
+                    $(elem).append("<button class='rem'>X</button>");
+                    $("#mylist").append(elem);
+                    $("input").val("");
+                    $(".rem").on("click", function() {
+                        $(this).parent().remove();
+                    });
+                }
+                });
+            });
+            
+            </script>
+
+
+            <h1>Yapılacak Listesi</h1>
+            <input type="text" placeholder="Yeni Madde" />
+            <button type="button" id="add">Ekle</button>
+            <hr><hr>
+            <ol id="mylist"></ol>
+            
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

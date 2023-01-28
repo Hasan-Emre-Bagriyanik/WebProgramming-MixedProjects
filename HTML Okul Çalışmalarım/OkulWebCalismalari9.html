@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="Bootstrap/bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+
+    <script>
+
+        var palindromSayilar = [];
+
+        var a,b,c,d,f,k,l,m,d;
+        for(i =10; i<=99; i++){
+            for(j=10; j<=99; j++){
+                c = i*j;
+                if(c>1000){
+                    a = parseInt(c/1000);//binler basamağı
+                    b = c % 10;//birler basamağı
+                    k = parseInt(c/100);
+                    m = parseInt(c/10);
+                    d = k - a *10; //yüzler basamağı
+                    f = m - k*10;//onlar basamağı
+                    if(a == b &&  d == f  ){ //binler basamağı ile birler basamağı aynı ve yüzler basamağı ile onlar basamağı aynı olursa 
+                        palindromSayilar.push(c);//diziye ekleyecek.
+                    }
+                }
+                if(100<c && c<1000){
+                    a = parseInt(c/100);
+                    b = c % 10;
+                    k = parseInt(c/10);
+                    d = k - a *10; 
+                    if(a == b  ){ 
+                        palindromSayilar.push(c);
+                    }
+                }
+            }
+        }
+        for(i=0; i<palindromSayilar.length; i++){
+            document.write(palindromSayilar[i] +"<br>");
+        }
+        alert("En büyük Palindrom sayı: " + palindromSayilar.pop());
+
+
+
+        
+        
+    </script>
+
+
+
+    <script src="Bootstrap/bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

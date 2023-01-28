@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+     
+    </head>
+    <body>
+<!--
+
+        <script>
+            // beden kitle indexi
+            var kilo = prompt("Lütfen kilonuzu giriniz: ");
+            var boy = prompt("Lütfen boyunuzu giriniz: ");
+
+            var hesaplama = kilo/((boy/100)*(boy/100));
+
+            if(hesaplama < 18.5){
+                alert("Çok Zayıfsın");
+            }
+            else if(18.5 < hesaplama  && hesaplama < 25){
+                alert("Sağlıklısın");
+            }
+            else{
+                alert("Çok Kilolusun")
+            }
+        </script>
+        -->
+
+
+
+
+
+        <script>
+            var palindromSayi = [];
+            var a,b,c,d,ek,l;
+            for(i=10; i<=99; i++){
+                for(j=10; j<=99; j++){
+                    c = i*j;
+                    
+                    if(c >= 1000){
+                        a = parseInt(c/1000);//binler basamağı
+                        b = c %10;//birler basamağı
+                        k = parseInt(c/100);
+                        l = parseInt(c/10);
+                        d = k % 10;//yüzler basamağı
+                        e = l - k*10;//onlar basamağı
+
+                        if(a ==b  && d == e){
+                            palindromSayi.push(c);
+                        }
+                        
+                    }
+
+                    else if(100 <= c  && c < 1000){
+                        a = parseInt(c/100); //yüzler basamağı
+                        b = c % 10; //birler basamağı
+                        k = parseInt(c/10);
+                        e = k % 10; //onlar basamağı
+
+                        if(a == b){
+                            palindromSayi.push(c);
+                        }
+
+
+                    }
+                    
+
+
+                }
+            }
+
+            for(i = 0; i < palindromSayi.length; i++){
+                document.write(palindromSayi[i] + "<br>")
+            }
+            alert("En büyük palindrom sayi: "+ palindromSayi.pop());
+
+
+        </script>
+
+
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

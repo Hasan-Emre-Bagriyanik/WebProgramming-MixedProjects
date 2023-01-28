@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+
+    <!--Burada Ozellikler.css adlı dosyadan link yardımı ile çekilmesi-->
+    <link rel="stylesheet" type="text/css" href="Ozellikler.css">
+    
+   <style>
+    .ozellikler1{
+        margin: 100px;
+        font-size: 35px;
+        color: purple;
+        font-family: Arial, Helvetica, sans-serif;
+
+    }
+
+    #ozellikler2{
+        margin-left: 50px;
+        font-size: 20px;
+        color: black;
+        font-family:Arial, Helvetica, sans-serif;
+        
+    }
+
+    .tablo{
+        padding-top: 50px;
+        padding-right: 80px;
+        padding-bottom: 50px;
+        padding-left: 100px;
+        border: 5px solid red;
+    }
+   
+
+    .tablo2{
+
+        padding: 50px 80px 50px 200px ;
+        border: 5px solid black;
+    }
+   
+   </style>
+
+
+
+</head>
+<body>
+
+    <h1 style="color:blue">Merhaba Dünya</h1>
+    <p>Bu paragraf CSS ile biçimlendirildi...</p>
+
+    <h3 class="ozellikler1">HTML’de Class Yazma ve Kullanımı</h3>
+    <p id="ozellikler2">HTML içerisinde html elentlerine daha önce belirli stiller vermiştik. Bu sitiller ile ilgili
+         yazımızı HTML İçerisine CSS Yazma ( Stiller ) okuyabilirsiniz. HTML elementleri içerisine  yazmak yerine 
+         aynı özelliği gösteren elementlere tek bir kere bu stilleri vermek için class yapısını kullanırız. Yani belirli
+          elementleri sınıflandırırız. </p>
+
+
+
+
+    <div style="background-color: black; color: white; padding:40px ;  margin: 100px;">
+        <h1><span style="color:white    ;">Londra</span> Şehri</h1>
+        <p>Londra Şehri, Roma İmparatorluğu tarafından etrafı surlarla kaplı, Britanya eyaletinin başkenti olarak kullandıkları
+        Londinium olarak ortaya çıkmış ve günümüze kadar Londra Şehri'nin alanı bu Romalı şehir alanından çok değişiklik göstermemiştir.
+        20. yüzyıl sonunda İngiltere'deki finansal kurumlar Büyük Londra bölgesinin Canary Wharf gibi alanlarına da yayılmakla beraber,
+         Londra Şehri eskiden ve günümüzde Avrupa'nın en önemli finansal merkezi olma durumunu korumuştur.</p>
+     </div>
+
+
+
+     <!--burada görünümü kapattığımız için sayfada görünmüyor-->
+     <p style="display:none"> Bu paragraf görünmüyor</p>
+
+
+     <p style="background-color:brown; color: white; width: 800px; height: 200px; padding: 50px; margin: 100px;">Londra Şehri, 36 diğer yerel idarî bölgeye sahip
+         ve Büyük Londra olarak adlandırılan metropoliten alan içerisinde bağımsız bir yerel idarî bölge olma niteliğini korumaktadır. 
+         Birleşik Krallık'ta uygulanan bir yerel idarî sistemi şekline göre Londra Şehri hukuken bir "törensel kontluk" statüsü ve "şehir
+          statüsü" taşımaktadır.</p>
+
+
+          <!--Yukarıda class oluşturarak tablo şeklini verdik-->
+    <p class="tablo">Londra Şehri 18. yüzyıldan itibaren bir ikametgah yerleşkesi olma niteliğini kaybetmeye başlamış; Londra Şehri
+        sınırları içinde devamlı yaşayan nüfus hızla azalmıştır. 20. yüzyılda bu azalma çok hızlanmış ve 2011 nüfus sayımına göre 
+        Londra Şehri'nde devamlı yaşayanların sayısı 7.375'e düşmüştür. Londra Şehri sınırları içinde devamlı yaşayanların hemen hepsi
+        Barbican Estate adını taşıyan 1960-1970 yıllarında açık betonarme brutalist mimarî usulüne göre inşa edilmiş büyük bir apartmanlar
+        kümesi içinde yaşamaktadırlar. Fakat, Londra Şehri çok büyük sayıda kişinin (300.000 üzerinde), günlük mesai ve çalışma yeridir.</p>
+    
+<style>
+     .visiable{
+        margin: 200px;
+        padding: 50px 100px 50px 50px;
+        background-color: blueviolet ;
+        height: 200px;
+        width: 600px;
+        overflow: visible;
+    
+     }
+
+     .hidden{
+        margin: 200px;
+        padding: 50px 100px 50px 50px;
+        background-color: rgb(43, 226, 125) ;
+        height: 200px;
+        width: 600px;
+        overflow: hidden;
+     }
+
+     .scroll{
+        margin: 200px;
+        padding: 50px 100px 50px 50px;
+        background-color: rgb(43, 226, 125) ;
+        height: 200px;
+        width: 600px;
+        overflow: scroll;
+     }
+
+     .auto{
+        margin: 200px;
+        padding: 50px 100px 50px 50px;
+        background-color: rgb(43, 226, 125) ;
+        height: 200px;
+        width: 600px;
+        overflow: auto;
+     }
+</style>
+
+
+
+
+    <p class="hidden"> 300'den fazla farklı dil konuşulmaktadır. Londra dünyanın en önemli iş ve finans merkezlerinden biridir. 
+        Yeşilliği bol olan Londra'yı Thames nehri iki yakaya bölmektedir. Londra, yüzyıllardır İngiliz kraliyet ailesine başkentlik yapmış b
+        ir şehir olmasından ötürü bugün kraliyet hazinelerinin en önemlilerine de ev sahipliği yapmaktadır. Kraliçe'nin evi olan Buckingham 
+        Sarayı'nın yanı sıra kraliyet hazinelerinin sergilendiği London Tower, Lady Diana'nın evi Kensington Sarayı gibi dünyanın en önemli 
+        sanat eserlerine ve tarihi kalıntılarına ev sahipliği yapan bir kültür kentidir. New York'tan sonra dünyanın en önemli müzikaller şe
+        hridir.</p>
+
+    
+    
+
+    <p class="scroll">tere'nin ve Birleşik Krallık'ın başkentidir. Türk öğrenciler tarafından dil eğitimi için en çok tercih edilen şehirdir!
+        Londra farklı kültürleri tanımak, eşsiz tarihi eser ve müzeleri gezmek, muhteşem parkları ve yeşil alanları görmek isteyen tüm öğr
+        enciler için en öncelikli tercihlerden biridir. Londra’da dünyanın her yerinden gelen insanlar yaşamaktadır. Çok çeşitli kültürleri
+        misafir eden Londra’da, 300'den fazla farklı dil konuşulmaktadır. Londra dünyanın en önemli iş ve finans merkezlerinden biridir. 
+        Yeşilliği bol olan Londra'yı Thames nehri iki yakaya bölmektedir. Londra, yüzyıllardır İngiliz kraliyet ailesine başkentlik yapmış b
+        ir şehir olmasından ötürü bugün kraliyet hazinelerinin en önemlilerine de ev sahipliği yapmaktadır. Kraliçe'nin evi olan Buckingham 
+        Sarayı'nın yanı sıra kraliyet hazinelerinin sergilend</p>
+
+
+    <p class="auto">tere'nin ve Birleşik Krallık'ın başkentidir. Türk öğrenciler tarafından dil eğitimi için en çok tercih edilen şehirdir!
+        Londra farklı kültürleri tanımak, eşsiz tarihi eser ve müzeleri gezmek, muhteşem parkları ve yeşil alanları görmek isteyen tüm öğr
+        enciler için en öncelikli tercihlerden biridir. Londra’da dünyanın her yerinden gelen insanlar yaşamaktadır. Çok çeşitli kültürleri
+        misafir eden Londra’da, 300'den fazla farklı dil konuşulmaktadır. Londra dünyanın en önemli iş ve finans merkezlerinden biridir. 
+        Yeşilliği bol olan Londra'yı Thames nehri iki yakaya bölmektedir. Londra, yüzyıllardır İngiliz kraliyet ailesine başkentlik yapmış b
+        ir şehir olmasından ötürü bugün kraliyet hazinelerinin en önemlilerine de ev sahipliği yapmaktadır. Kraliçe'nin evi olan Buckingham 
+        Sarayı'nın yanı sıra kraliyet hazinelerinin sergilendndra'yı Thames nehri iki yakaya bölmektedir. Londra, yüzyıllardır İngiliz kraliyet ailesine başkentlik yapmış b
+        ir şehir olmasından ötürü bugün kraliyet hazinelerinin en önemlilerine de ev sahipliği yapmaktadır. Kraliçe'nin evi olan Buckingham 
+        Sarayı'nın yanı sıra kral</p>
+
+        <p class="visiable" >Londra, İngiltere'nin ve Birleşik Krallık'ın başkentidir. Türk öğrenciler tarafından dil eğitimi için en çok tercih edilen şehirdir!
+            Londra farklı kültürleri tanımak, eşsiz tarihi eser ve müzeleri gezmek, muhteşem parkları ve yeşil alanları görmek isteyen tüm öğr
+            enciler için en öncelikli tercihlerden biridir. Londra’da dünyanın her yerinden gelen insanlar yaşamaktadır. Çok çeşitli kültürleri
+            misafir eden Londra’da, 300'den fazla farklı dil konuşulmaktadır. Londra dünyanın en önemli iş ve finans merkezlerinden biridir. 
+            Yeşilliği bol olan Londra'yı Thames nehri iki yakaya bölmektedir. Londra, yüzyıllardır İngiliz kraliyet ailesine başkentlik yapmış b
+            ir şehir olmasından ötürü bugün kraliyet hazinelerinin en önemlilerine de ev sahipliği yapmaktadır. Kraliçe'nin evi olan Buckingham 
+            Sarayı'nın yanı sıra kraliyet hazinelerinin sergilendiği London Tower, Lady Diana'nın evi Kensington Sarayı gibi dünyanın en önemli 
+            sanat eserlerine ve tarihi kalıntılarına ev sahipliği yapan bir kültür kentidir. New York'tan sonra dünyanın en önemli müzikaller şe
+            hridir.</p>
+
+
+
+        <style>
+            
+            img {
+                position: fixed;
+                top: 0px;
+                left: 0px;
+                z-index: -1;
+            }
+            
+
+        </style>
+
+
+        <!--absolute: Sabit bir şekilde kalır
+        fixed: ekranda kalır ama alttan sayfalar geçer
+         -->
+        <img src="cicek.jpg" width="150px" height="200px">
+
+
+
+</body>
+</html>

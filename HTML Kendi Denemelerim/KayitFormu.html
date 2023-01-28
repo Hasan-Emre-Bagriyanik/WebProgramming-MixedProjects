@@ -1,0 +1,279 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js"></script>
+
+
+        <style>
+            .icerik{
+                width: auto;
+                height: auto;
+                font-size: 16px;
+                margin-top: 100px;
+            }
+
+            #nameError, #emailError, #passError, #passConfirmError, #postError, #sehirError{
+                font-size: 12px;
+                color: red;
+
+            }
+        </style>
+
+    </head>
+    <body>
+
+
+        <div class="container">
+            <form action="" name="form" id="form">
+                <table border="1" align="center" class="icerik"> 
+                    <tr>
+                        <td>Ad - Soyad</td>
+                        <td><input type="text" id="name" name="name" >
+                        <p id="nameError"></p></td>
+                    </tr>
+                    <tr>
+                        <td>e-mail</td>
+                        <td><input type="email" id="email" name="email" >
+                        <p id="emailError"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Şifre</td>
+                        <td><input type="password" id="pass"name="pass" >
+                        <p id="passError"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Şifre Tekrarı</td>
+                        <td><input type="password" id="passConfirm" name="passConfirm" >
+                        <p id="passConfirmError"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Posta Kodu</td>
+                        <td><input type="number" id="post" name="post" >
+                        <p id="postError"></p></td>
+                    </tr>
+                    <tr>
+                        <td>Şehir</td>
+                        <td><select name="sehir" id="sehir">
+                            <option value="0">[Seçiniz]</option>
+                            <option value="1">Hatay</option>
+                            <option value="2">Ankara</option>
+                            <option value="3">Adana</option>
+                        </select>
+                        <p id="sehirError"></p></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="button" id="btn" name="btn"  value="Kayıt Ol" ></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+
+        <script>
+/*
+            $(document).ready(function(){
+                var nameError = true,
+                emailError = true,
+                passError = true,
+                passConfirmError = true,
+                postError = true,
+                sehirError = true;
+
+
+                $("#btn").on("click",function(){
+                    var isim = $("#name").val();
+                    var email = $("#email").val();
+                    var pass = $("#pass").val();
+                    var passConfirm = $("#passConfirm").val();
+                    var post = $("#post").val();
+                    
+
+                    if(isim = ""){
+                        $("#nameError").text("Lütfen isminizi giriniz...");
+                        nameError = true;
+                    }
+                    else{
+                        nameError = false;
+                    }
+
+
+                    if(email = ""){
+                        $("#emailError").text("Lütfen e-mailinizi giriniz...");
+                        emailError = true;
+                    }
+                    else{
+                        emailError = false;
+                    }
+
+
+                    if(pass == ""){
+                        $("#passError").text("Lütfen şifrenizi giriniz...");
+                        passError = true;
+                    }
+                    else if(pass < 5){
+                        $("#passError").text("Lütfen şifreniz en az 5 karakterden oluşmaktadır...");
+                        passError = true;
+                    }
+                    else{
+                        passError = false;
+                    }
+
+
+                    if(pass != passConfirm){
+                        $("#passConfirmError").text("Lütfen yukarıdaki şifre ile aynı olmalıdır...");
+                        passConfirmError = true;
+                    }
+                    else{
+                        passConfirmError = false;
+                    }
+
+
+                    if(post == 5){
+                        $("#postError").text("Lütfen posta kodu en az 5 karakterden oluşmalıdır...");
+                        postError = true;
+                    }
+                    else{
+                        postError = false;
+                    }
+
+                    if($("#form select").val() == 0){
+                        $("#sehirError").text("Lütfen bir şehir seçiniz...");
+                        sehirError = true;
+                    }
+                    else{
+                        sehirError = false;
+                    }
+
+
+                    if(nameError == false && emailError == false && passError == false && passConfirmError == false && postError == false && sehirError == false){
+                        alert("Form kaydınız başarıyla alınmıştır...");
+
+                        $("#name").val("");
+                        $("#email").val("");
+                        $("#pass").val("");
+                        $("#passConfirm").val("");
+                        $("#post").val("");
+                        $("#sehir").val(0);
+
+
+                        $("#nameError").text("");
+                        $("#emailError").text("");
+                        $("#passError").text("");
+                        $("#passConfirmError").text("");
+                        $("#postError").text("");
+                        $("#sehirError").text("");
+
+                        
+                    
+                    }
+
+
+                });
+            });
+*/
+
+
+
+
+
+            
+            function validate(){
+                var isim = document.getElementById("name").value;
+                var email = document.getElementById("email").value;
+                var pass = document.getElementById("pass").value;
+                var passConfirm = document.getElementById("passConfirm").value;
+                var posta = document.getElementById("post").value;
+
+
+                var nameError = true,
+                emailError = true,
+                passError = true,
+                passConfirmError = true,
+                postError = true,
+                sehirError = true;
+
+
+                if(isim = ""){
+                    document.getElementById("nameError").innerHTML = "Lütfen isminizi giriniz...";
+                    nameError = true;
+                }
+                else{
+                    nameError = false;
+                }
+
+
+                if(email == ""){
+                    document.getElementById("emailError").innerHTML = "Lütfen email adresiniz giriniz...";
+                    emailError = true;
+                }
+                else{
+                    emailError = false;
+                }
+
+
+                if(pass == ""){
+                    document.getElementById("passError").innerHTML = "Lütfen şifrenizi giriniz...";
+                    passError = true;
+                }
+                else if(pass < 5  ) {
+                    document.getElementById("passError").innerHTML = "Lütfen şifrenizi 5  karakterden az girmeyiniz...";
+                    passError = true;
+                }
+                else{
+                    passError = false;
+                }
+
+
+                if(pass!= passConfirm){
+                    document.getElementById("passConfirmError").innerHTML = "Lütfen şifrenizin aynısını yazınız...";
+                    passConfirmError =true;
+                }
+                else{
+                    passConfirmError = false;
+                }
+
+
+                if(posta.length != 5){
+                    document.getElementById("postError").innerHTML = "Lütfen 5 haneli posta kodunu giriniz...";
+                    postError = true;
+                }
+                else{
+                    postError = false;
+                }
+
+                if(form.sehir.value == 0){
+                    document.getElementById("sehirError").innerHTML = "Lütfen bir şehir seçiniz...";
+                    sehirError = true;
+                }
+                else{
+                    sehirError = false;
+                }
+
+
+           
+                if(nameError == false && emailError == false && passError == false && passConfirmError == false && postError == false && sehirError == false){
+                    alert("Formunuz başarıyla alınmıştır...");
+                }
+            }
+            
+
+
+        </script>
+
+
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

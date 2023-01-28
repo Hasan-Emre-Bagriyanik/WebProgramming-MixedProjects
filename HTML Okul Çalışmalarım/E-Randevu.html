@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='E-Randevu.css'>
+    <script src='E-Randevu.js'></script>
+    <link rel="stylesheet" href="Bootstrap/bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="JQuery/jquery validation/lib/jquery-1.11.1.js"></script>
+    <script type="text/javascript" src="JQuery/jquery-3.6.1.min.map"></script>
+
+</head>
+<body>
+    
+
+<div class="container-fluid">
+  <div class="cover">
+  </div>
+</div>
+
+
+
+        <div class="main-content-bg" >
+            <div class="container main-content  " style="width: 950px;" >
+              <div class="main-head" style="margin: 20px;">
+              <h1>E-RANDEVU / HASTANE RANDEVU</h1>
+              <hr>
+                  <p style="color:white;font-weight: 800; font-size:20px;letter-spacing:0px;">Medicana Sağlık Grubu Hastaneleri, Tüm Branşlarda SGK Anlaşmalıdır.</p>
+                  <ol class="breadcrumb main-head li">
+                      <li><a href="HastaneRandevu.html" style="color:white; font-weight: 800;padding-right: 10px;text-decoration: none;font-size: 15px;">Anasayfa</a></li>
+                      <li><a>  E-Randevu / Hastane Randevu</a></li>
+                  </ol>
+              </div>
+            </div> 
+          </div>
+            
+        <div class="container bg-white p-5" style="margin-top: -50px;  width: 950px;">
+          <form id="form1" name="form1">
+            
+              <div class="form-group-center  col-sm-12 col-md-12 col-lg-8 m-5 "  >
+                <label for="hastane" style="font-size: 20px; font-weight: 500; " >Randevu almak istediğiniz hastaneyi seçiniz:</label>
+                <select class="form-control" style="padding: 20px; font-size: 16px; font-weight: 500;" id="hastane" name="hastane" required>
+                  <option value="0" >Hastane Seçiniz</option>
+                  <option value="1" >aaaaaaaaaaaaaaaa</option>
+                  <option value="2">bbbbbbbbbbbbbbbb</option>
+                  <option value="3">cccccccccccccccc</option>
+                  <option value="4">dddddddddddddddd</option>
+                  <option value="5">eeeeeeeeeeeeeeee</option>
+                </select>
+                <span id="hastError"></span>
+            </div>
+              
+
+            <div class="form-group-center  col-sm-12 col-md-12 col-lg-8 m-5 "  >
+              <label for="alan" style="font-size: 20px; font-weight: 500;">Randevu almak istediğiniz uzmanlık alanını seçiniz:</label>
+              <select class="form-control" style="padding: 20px; font-size: 16px; font-weight: 500;" id="alan" name="uzman" required>
+                <option value="0">Uzmanlık alanını Seçiniz</option>
+                <option value="1">aaaaaaaaaaaaaaaa</option>
+                <option value="2">bbbbbbbbbbbbbbbb</option>
+                <option value="3">cccccccccccccccc</option>
+                <option value="4">dddddddddddddddd</option>
+                <option value="5">eeeeeeeeeeeeeeee</option>
+              </select>
+              <span id="uzmanError"></span>
+            </div>
+
+              <button  type="button" class="btn btn-primary " id="btn" onclick="ValidateHastane();ValidateUzmanlik();if(hastError == false && uzmanError == false){window.setTimeout(function(){location.href = 'http://127.0.0.1:5500/HTML%20Okul%20%C3%87al%C4%B1%C5%9Fmalar%C4%B1m/E-Randevu1.html';}, 1);}" style="padding: 8px 30px; font-size: 20px; margin-left: 40px; ">Devam</button>
+
+            
+          </form>
+        </div>
+      <script>
+        var uzmanError = true , 
+        hastError = true;
+
+         function ValidateHastane(){
+            if(form1.hastane.value == 0)
+            {
+                document.getElementById("hastError").innerHTML = "Lütfen Bir Hastane Seçin...";
+                
+                hastError = true;
+            }
+            else
+            {
+                document.getElementById("hastError").innerHTML = "";
+                hastError = false;
+            }
+        }
+
+
+
+        function ValidateUzmanlik(){
+            if(form1.uzman.value == 0)
+            {
+                document.getElementById("uzmanError").innerHTML = "Lütfen Bir Uzmanlık alanı Seçin...";
+                
+                uzmanError = true;
+            }
+            else
+            {
+                document.getElementById("uzmanError").innerHTML = "";
+                uzmanError = false;
+            }
+        }
+
+      
+
+          
+  
+      </script>
+      
+
+
+
+  
+
+
+
+
+
+
+    <script src="Bootstrap/bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,141 @@
+
+.cover{
+    background-image: url("https://madicanacdnstorage.blob.core.windows.net/main/www/medicana/assets/img/pagehead/online-randevu.jpg");
+    width: 100%;
+    height: 450px;
+}
+
+.main-content{
+    display: block;
+    min-height: 128px;
+    margin-top: -330px;
+    background: rgba(0, 27, 68, 0.7);
+    padding-top: 1px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 80px;
+    width: 500px;
+    margin-left: 120px;
+    color: white;
+    font-size: 26px;
+    
+    
+}
+
+.main-head h1{ 
+    font-size: 20px;
+    color: white;
+    font-weight: 1000;
+}
+
+.main-head li{
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+}
+
+
+
+.form-body{
+    
+    font-size: 23px;
+    padding: 20px;
+    margin: 15px;
+    margin-right: 150px;
+    width: 700px;
+    height: 400px;
+    
+   
+    
+    
+}
+
+.full-items{
+    
+    width: 100%;
+
+}
+
+.form{
+    margin-left: 500px;
+    background-color: aqua;
+    width: 1000px;
+    height: 1000px;
+    
+    
+}
+
+
+.control-label{
+    
+    margin-bottom: 10px;
+}
+
+.blue-btn{
+    float: right;
+    height: 50px;
+    width: 130px;
+    
+    margin: 30px;
+    font-weight: bolder;
+    color: white;
+    font-size: 30px;
+    background-color: darkslategrey;
+}
+
+
+.rndIptal{
+    margin-top: 125px;
+    text-decoration: none;
+    color: white;
+}
+
+
+.form-control{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    
+}
+
+
+#index{
+    z-index: -1;
+}
+
+
+.error-msg{
+    font-size: 12px;
+    padding-top:10px;
+    display: block;
+    color:darkmagenta;
+
+}
+
+.form form .form-group.hasError input {
+    border-color: #f95959 !important;
+  }
+  .form form .form-group.hasError label {
+    color: #f95959 !important;
+  }
+  .form form input:not([type=submit]).hasError {
+    border-color: #f95959;
+  }
+  .form form span.error {
+    color: #f95959;
+    font-family: "Montserrat", sans-serif;
+    font-size: 12px;
+    position: absolute;
+    bottom: -20px;
+    right: 0;
+    display: none;
+  }
+
+
+  
+#hastError, #uzmanError{
+    font-size: 14px;
+    
+    display: block;
+    color:red;
+}

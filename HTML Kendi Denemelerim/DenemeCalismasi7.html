@@ -1,0 +1,144 @@
+
+<!DOCTYPE html>
+<html lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Title Page</title>
+
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+        <style>
+            .icerik{
+                width: 400px;
+                height: 300px;
+                font-size: 20px;
+            }
+        </style>
+
+
+    </head>
+    <body>
+
+        <form action="" name="form">
+            <table border="1" align="center" class="icerik">
+                <tr >
+                    <td>Ad - Soyad</td>
+                    <td><input type="text" id="name" name="name">
+                    <p id="name"></p></td>
+                </tr>
+                <tr>
+                    <td>e-mail</td>
+                    <td><input type="email" id="email" name="email">
+                    <p id="email"></p></td>
+                </tr>
+                <tr>
+                    <td>Şifre</td>
+                    <td><input type="password" id="pass" name="pass">
+                    <p id="pass"></p></td>
+                </tr>
+                <tr>
+                    <td>Şifre Tekrarı</td>
+                    <td><input type="password" id="passConfirm" name="passConfirm">
+                    <p id="passConfirm"></p></td>
+                </tr>
+                <tr>
+                    <td>Posta Kodu</td>
+                    <td><input type="text" id="post" name="post">
+                    <p id="post"></p></td>
+                </tr>
+                <tr>
+                    <td>Şehir</td>
+                    <td><select name="sehir" id="sehir">
+                        <option value="0">[Seçiniz]</option>
+                        <option value="1">Hatay</option>
+                        <option value="2">Ankara</option>
+                        <option value="">İstanbul</option>
+                    </select><p id="sehir"></p></td>
+                </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" id="btn" name="btn" onclick="kontrol()">Kayıt Ol</button></td>
+                </tr>
+            </table>
+        </form>
+
+
+
+        <script>
+            var nameError = true,emailError= true,passError = true, passConfirmError = true, postError = true, sehirError = true;
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("pass").value;
+            var passConfirm = document.getElementById("passConfirm").value;
+            var post = document.getElementById("post").value;
+
+
+            if(name = ""){
+                document.getElementById("name").innerHTML = "Lütfen isim alanını doldurunuz...";
+                nameError = true;
+            }
+            else{
+                nameError = false;
+            }
+            
+            if(email = ""){
+                document.getElementById("email").innerHTML = "Lütfen e-mail alanını doldurunuz...";
+                emailError = true;
+            }
+            else{
+                emailError = false;
+            }
+
+            if(pass = ""  & pass < 5){
+                document.getElementById("pass").innerHTML = "Lütfen geçerli bir şifre giriniz...";
+                passError = true;
+            }
+            else{
+                passError = false;
+            }
+
+            if(passConfirm != pass){
+                document.getElementById("passConfirm").innerHTML = "Lütfen yukarıdaki şifre aynı olmalıdır...";
+                passConfirmError = true;
+            }
+            else{
+                passConfirmError = false;
+            }
+
+            if(post != 5){
+                document.getElementById("post").innerHTML = "Lütfen geçerli bir posta kodu giriniz...";
+                postError = true; 
+            }
+            else{
+                postError = false;
+            }
+
+            if(form.sehir.value == 0){
+                document.getElementById("sehir").innerHTML = "Lütfen bir şehir seçiniz...";
+                sehirError = true;
+            }
+            else{
+                sehirError = false;
+            }
+
+
+            function kontrol(){
+                if(nameError == false && emailError == false && passError == false && passConfirmError == false && postError == false && sehirError == false){
+                    alert("İşleminiz başarıyla gerçekleşmiştir...");
+
+                }
+            }
+
+            
+        </script>
+
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+</html>

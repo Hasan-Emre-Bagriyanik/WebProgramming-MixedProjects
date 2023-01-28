@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+    <link rel="stylesheet" href="Bootstrap/bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/css/bootstrap.min.css">
+</head>
+<body>
+    
+
+    <script>
+
+
+        var boy = prompt("Lütfen Boyunuzu Giriniz(cm): ");
+        var kilo = prompt("Lütfen Kilonuzu Giriniz(kg): ");
+
+        var bki = kilo / ((boy/100)* (boy/100));
+
+            if(bki<18.5) 
+                alert("Çok Zayıfsınız" + " " + bki);
+            else if(bki>=18.5 && bki<25)
+                alert("Sağlıklısınız" + " " +  bki);
+            else
+                alert("Çok Kilolusunuz" +  " "  +bki);
+
+
+    </script>
+
+
+    <script src="Bootstrap/bootstrap-5.2.3-dist/bootstrap-5.2.3-dist/js/bootstrap.min.js"></script>
+    
+</body>
+</html>

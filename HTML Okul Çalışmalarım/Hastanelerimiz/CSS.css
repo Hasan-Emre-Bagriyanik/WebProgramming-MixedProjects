@@ -1,0 +1,42 @@
+
+
+header{
+    background-image: url("https://www.gelisimhastanesi.com/Content/UserFiles/Slider/Orjinal/bb-banner-05-344b1.jpg");
+    width:100%;
+    height: 375px;
+    margin-top: 0px;
+    display: block;
+    background-position: right;
+    background-size: cover;
+    position: absolute;
+    
+}
+
+.detay{
+    display: block;
+    min-height: 128px;
+    background: rgba(0, 27, 68, 0.7);
+    padding-top: 10px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 36px;
+    margin-top: 180px;
+    width: 80%;
+    
+    color: white;
+    font-size: 26px;
+    
+
+}
+.detayLinkleri{
+    margin-top: 30px;
+    list-style: none;
+    color: white;
+    margin-left: 140px;
+    margin-top: -88px;
+    border-radius: 4px;
+    float: left;
+    margin-right: 10px;
+
+}
+

@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+
+    <style>
+        .icerik{
+            width: 400px;
+            height: 300px;
+            font-size: 20px;
+            
+            
+        }
+        #demo1{
+            font-size: 15px;
+            color: red;
+        }
+        #demo2{
+            font-size: 15px;
+            color: red;
+        }
+        #demo3{
+            font-size: 15px;
+            color: red;
+        }
+        #demo4{
+            font-size: 15px;
+            color: red;
+        }
+        #demo5{
+            font-size: 15px;
+            color: red;
+        }
+
+        .icerik2{
+            font-size: 15px;
+            width: 200px;
+            height:auto;
+            
+        }
+    </style>
+    
+</head>
+<body>
+
+    <form action="" >
+        <table border="1" align="center" class="icerik">
+            <tr>
+                <td>Ad Soyad</td>
+                <td><input type="text" name="name" id="name" required placeholder="Lütfen adınızı giriniz">
+                <p id="demo1"></p></td>
+            </tr>
+            <tr>
+                <td>e-mail</td>
+                <td><input type="email" name="mail" id="mail" required placeholder="Lütfen e-mail adresinizi giriniz">
+                    <p id="demo2"></p></td>
+               
+            </tr>
+            <tr>
+                <td>Şifre</td>
+                <td><input type="password" name="pass" id="pass" required placeholder="Lütfen şifrenizi giriniz">
+                <p id="demo3"></p></td>
+            </tr>
+            <tr>
+                <td>Şifre Tekrar</td>
+                <td><input type="password" name="passConfirm" id="passConfirm" required placeholder="Lütfen tekrar şifrenizi giriniz">
+                    <p id="demo4"></p></td>
+            </tr>
+            <tr>
+                <td>Posta Kodu</td>
+                <td><input type="text" name="postCode" id="postCode" required placeholder="Lütfen posta kodunu giriniz">
+                    <p id="demo5"></p></td>
+            </tr>
+            <tr>
+                <td>Şehir</td>
+                <td><select name="SehirSeciniz" id="cityOption" required >
+                    <option value="0">[Seçiniz]</option>
+                    <option value="1">Hatay</option>
+                    <option value="2">Ankara</option>
+                    <option value="3">Kırklareli</option>
+                </select><p id="demo6"></p> </td>
+            </tr>
+            <tr>
+                <td></td> 
+                <td><button type="submit" value="submit" class="btn btn-primary"  onclick="Validate()">Kayıt Ol</button>
+                </td>
+            </tr>
+        </table>
+
+
+
+
+        <br><br>
+        <br><br><br><br>
+
+
+        <table id="table" border="1" align="center" class="icerik2">
+            <tr>
+                <td>Satır1 Sutun1</td>
+                <td>Satır1 Sutun2</td>
+            </tr>
+            <tr>
+                <td>Satır2 Sutun1</td>
+                <td>Satır2 Sutun2</td>
+            </tr>
+            <tr>
+                <td>Satır3 Sutun1</td>
+                <td>Satır3 Sutun2</td>
+            </tr>
+        </table class="icerik2">
+        <center><button onclick="tableRowAdd()">Satır Ekle</button>
+            <button onclick="tableDeleteRow()">Satır Sil</button>
+        </center>
+        <script>
+            function tableRowAdd()
+        {
+            var table = document.getElementById("table");
+            var satir = document.getElementById("table").getElementsByTagName("tr");
+            var satirSayi = satir.length;
+            var row = table.insertRow(satirSayi);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            cell1.style.backgroundColor = "green";
+            cell2.style.backgroundColor = "green";
+            cell1.innerHTML = "Satir" + (satirSayi) + " Sutun 1";
+            cell2.innerHTML = "Satir" + (satirSayi) + " Sutun 2";
+        }
+        function tableDeleteRow()
+        {
+            var table = document.getElementById("table");
+            var row = document.getElementById("table").getElementsByTagName("tr");
+            document.getElementById("table").deleteRow((row.length - 1));
+        }
+        </script>
+        
+        
+    </form>
+    <script src="OkulWebSayfasi9.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,161 @@
+
+.section {
+    padding: 100px 0;
+}
+  
+  .section-sm {
+    padding: 70px 0;
+  }
+  
+  .section-bottom {
+    padding-bottom: 100px;
+  }
+  
+  .section-title {
+    margin-bottom: 70px;
+  }
+  
+  .section-title h2 {
+    color: #223a66;
+  }
+  
+  .appoinment-content {
+    position: relative;
+  }
+  
+  .appoinment-content img {
+    width: 85%;
+  }
+  
+  .appoinment-content .emergency {
+    position: absolute;
+    content: "";
+    right: 10px;
+    bottom: 20px;
+    background: #223a66;
+    padding: 48px;
+  }
+  
+  .appoinment-content .emergency h2 {
+    color: #fff;
+  }
+  
+  .appoinment-content .emergency i {
+    margin-right: 10px;
+    color: rgba(255, 255, 255, 0.7);
+  }
+  
+  .appoinment-form {
+    margin-top: 50px;
+    
+  }
+  
+  .appoinment-form .form-control {
+    background: #f4f9fc;
+    height: 55px;
+    border-color: rgba(0, 0, 0, 0.05);
+  }
+  
+  .appoinment-form textarea.form-control {
+    height: auto;
+  }
+  
+  section div div form a.btn {
+    display: inline-block;
+    font-size: 14px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    letter-spacing: .5px;
+    padding: .75rem 2rem;
+    font-family: "Exo", sans-serif;
+    text-transform: uppercase;
+    border-radius: 5px;
+    border: 2px solid transparent;
+    transition: all .35s ease;
+    
+    
+  }
+  
+  section div div form a.btn.btn-icon i {
+    border-left: 1px solid rgba(255, 255, 255, 0.09);
+    padding-left: 15px;
+  }
+  
+  section div div form a.btn:focus {
+    outline: 0px;
+    box-shadow: none;
+  }
+  
+  section div div form a.btn-main {
+    background: #223a66;
+    color: #fff;
+    border-color: #223a66;
+  }
+  
+  section div div form a.btn-main:hover {
+    background: #e12454;
+    border-color: #e12454;
+    color: #fff;
+  }
+  
+  
+  section div div form a.btn-round-full {
+    border-radius: 50px;
+  }
+  
+  section div div form a.btn.active:focus, .btn:active:focus, .btn:focus {
+    outline: 0;
+  }
+  
+  .text-lg {
+    font-size: 3.75rem;
+  }
+  
+  .text-lg {
+    font-size: 50px;
+  }
+  
+  .gray-bg {
+    background: #f4f9fc;
+  }
+  
+  @media (max-width: 480px) {
+    .text-lg {
+      font-size: 28px;
+    }
+  }
+  
+  @media (max-width: 400px) {
+    .text-lg {
+      font-size: 28px;
+    }
+  }
+  
+  
+
+  #poliError,#dateError,#timeError,#dokError{
+    font-size: 15px;
+      padding-top:10px;
+      display: block;
+      color:red;
+  }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  

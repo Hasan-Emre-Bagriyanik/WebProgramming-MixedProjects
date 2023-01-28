@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name="Viewport" content="widht=device-widht, initial-scale=1.0" >
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='main.js'></script>
+
+
+    <style>
+    *{
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+        padding: 10px;
+        background:#f1f1f1;
+    }
+
+    .header{
+        text-align: center;
+        background-color: lightblue;
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
+
+    .header h1 {
+        font-size: 25px;
+    }
+
+    .scroll{
+        
+        width: 420px;
+        height: 150px;
+        padding: 15px 15px 5px 15px;
+        background-color: chartreuse;
+        margin: 15px 15px 15px 15px;
+
+    }
+
+    .topnav  {
+        float:  left;
+        display:block;
+        background-color: bisque;
+        text-align: center;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        width: 100%;
+        font-size: 15px;
+        
+    }
+
+    .topnav a{
+        float: left;
+        text-align: left;
+        font-size: 10px;
+        padding: 10px 10px 10px 10px;
+        background-color: blue;
+        color: white;
+        margin-left: 20px;
+
+    }
+
+    .rightcolumn{
+        float: right;
+        width: 16%;
+        background-color: coral;
+        margin: 20px;
+        text-align: center;
+        padding-bottom: 100px;
+        
+    }
+
+    .centercolumn{
+        margin-top: 20px;
+        float: left;
+        width: 62%;
+        background-color: purple;
+    }
+
+    .leftcolumn{
+        float:left;
+        width: 16%;
+        background-color: coral;
+        margin: 15px;
+        text-align: center;
+        padding-bottom: 100px;
+        
+    }
+
+    .footer{
+        text-align: center;
+        background-color:crimson;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        width: 100%;
+        float: left;
+        margin-top: 15px;
+
+
+    }
+
+
+
+    @media only screen and (max-widht:600px){
+        .col-s-1 {width: 90%;}
+        .col-s-4 {width: 100%;}
+        .col-s-8 {width: 100%;}
+        .col-s-12 {width: 100%;}
+        
+    }
+
+    
+    @media only screen and (min-widht:768px){
+        .col-4 {width: 15%;}
+        .col-8 {width: 60%;}
+        .col-12 {width: 100%;}
+        
+    }
+
+
+    </style>
+
+
+
+</head>
+<body>
+    
+
+<div class="header col-12 col-s-12" style="border: 1px solid blue;">
+    <h1>Makaleler</h1>
+</div>
+
+<div class="topnav col-12 col-s-12" style="border: 1px solid blue ;">
+    <h1>Menü Burası</h1>
+    <div class="topnav a">
+    <a href="#">Anasayfa</a>
+    <a href="#">Hakkımızda</a>
+    <a href="#">İletişim</a>
+    </div>
+    
+
+</div>
+<div class="leftcolumn col-4 col-s-4" >
+    <h3>Resim Alanı</h3>
+    <a href="http://www.w3schools.com" target="_blank"><img src="w3schools.jpg" alt="Okul Resmi" ></a>
+
+</div>
+
+<div class="centercolumn col-8 col-s-8">
+    <div class="scroll col-s-1" style="float: left;">
+        <h3>Makale 1</h3>
+    </div>
+    <div class="scroll col-s-1" style="float: left;">
+        <h3>Makale 2</h3>
+    </div>
+    <div class="scroll col-s-1" style="float: left;">
+        <h3>Makale 3</h3>
+    </div>
+    <div class="scroll col-s-1" style="float: left; overflow: scroll;" >
+        
+        <p> <span style="color: red;">Lorem Ipsum</span> is simple dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever sice the 1500s.Lorem Ipsum is simple dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever sice the 1500s.Lorem Ipsum is simple dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever sice the 1500s.Lorem Ipsum is simple dummy text of the printing and typesetting industry. Lorem Ipsum has been the
+            industry's standard dummy text ever sice the 1500s.</p>
+    </div>
+    
+   
+
+</div>
+
+<div class="rightcolumn col-4 col-s-4" style="margin-left: 5px">
+    <h3>Resim Alanı</h3>
+    <a href="http://www.w3schools.com" target="_blank"><img src="w3schools.jpg" alt="Okul Resmi" ></a>
+
+</div>
+
+<div class="footer col-12 col-s-12">
+    <p>KLU Yazılımın Mühendisliği 2021</p>
+</div>
+
+</body>
+</html>

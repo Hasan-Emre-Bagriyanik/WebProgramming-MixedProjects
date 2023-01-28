@@ -1,0 +1,362 @@
+
+.topbar{
+  background-color: #212529;
+  padding: 0;
+}
+
+.topbar .container .row {
+  margin:-7px;
+  padding:0;
+}
+
+.topbar .container .row .col-md-12 { 
+  padding:0;
+}
+
+.topbar p{
+  margin:0;
+  display:inline-block;
+  font-size: 13px;
+  color: #f1f6ff;
+}
+
+.topbar p > i{
+  margin-right:5px;
+}
+.topbar p:last-child{
+  text-align:right;
+} 
+.topbar li.topbar {
+    display: inline;
+    padding-right: 18px;
+    line-height: 52px;
+    transition: all .3s linear;
+}
+
+.topbar li.topbar:hover {
+    color: #1bbde8;
+}
+
+ul.social-network {
+  border:none;
+  margin:0;
+  padding:0;
+}
+
+ul.social-network li {
+  border:none;  
+  margin:0;
+} 
+
+ul.social-network li i {
+  margin:0;
+}
+
+ul.social-network li {
+    display:inline;
+    margin: 0 5px;
+    border: 0px solid #2D2D2D;
+    padding: 5px 0 0;
+    width: 32px;
+    display: inline-block;
+    text-align: center;
+    height: 32px;
+    vertical-align: baseline;
+    color: #000;
+}
+
+ul.social-network {
+  list-style: none;
+  margin: 5px 0 10px -25px;
+  float: left;
+}
+
+.waves-effect {
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    overflow: hidden;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    vertical-align: middle;
+    z-index: 1;
+    will-change: opacity, transform;
+    transition: .3s ease-out;
+    color: #fff;
+}
+a {
+  color: #0a0a0a;
+  text-decoration: none;
+}
+
+li {
+    list-style-type: none;
+}
+
+.phone{
+
+    float: right;
+    display: inline-flex;
+    margin:0;
+    padding:0;
+}
+
+ul.phoneFooter{
+  display: grid;
+}
+
+ul.phoneFooter li{
+  float: left;
+  padding-right: 10px;
+  text-decoration: none;
+}
+
+ul.phoneFooter li a i:hover{
+  color: #1bbde8;
+  transition: all .3s linear;
+  text-decoration: none;
+}
+
+ul.phoneFooter li a i{
+  padding-left: 5px;
+}
+
+.phone li{
+    margin:10px;
+}
+
+ul.phone li a i:hover{
+    color: #1bbde8;
+    transition: all .3s linear;
+}
+
+ul.phone li a{
+    text-decoration: none;
+}
+
+nav div ul li:hover{
+    
+    background-color: rgb(195, 58, 58);
+    transition: all .3s linear;
+}
+
+nav div ul li{
+    
+    border-radius: 20px;
+}
+
+.randevuButton{
+  float: right;
+}
+
+.randevuButton li{
+  border-radius: 20px;
+  text-align: center;
+  background-color: #2D2D2D;
+}
+
+.randevuButton li:hover{
+  background-color: #5c5c5c;
+  transition: all .3s linear;
+}
+
+nav div ul li div a.dropdown-item:hover{
+  
+  color: white;
+  background-color: rgb(195, 58, 58);
+}
+  
+.footerPhotos li{
+  margin-top: 50px;
+  margin-left: 10px;
+  padding-right: 10px;
+  float: left;
+  display: inline;
+}
+
+ul.faydaliLink{
+  float: left;
+  text-decoration: none;
+}
+
+ul.faydaliLink li{
+  list-style-type: disc;
+  text-decoration: none;
+  color: white;
+
+}
+
+ul.faydaliLink li a i:hover{
+  color: #1bbde8;
+  transition: all .3s linear;
+  text-decoration: none;
+}
+
+
+
+.section {
+  padding: 100px 0;
+}
+
+.section-sm {
+  padding: 70px 0;
+}
+
+.section-bottom {
+  padding-bottom: 100px;
+}
+
+.section-title {
+  margin-bottom: 70px;
+}
+
+.section-title h2 {
+  color: #223a66;
+}
+
+.appoinment-content {
+  position: relative;
+}
+
+.appoinment-content img {
+  width: 85%;
+}
+
+.appoinment-content .emergency {
+  position: absolute;
+  content: "";
+  right: 10px;
+  bottom: 20px;
+  background: #223a66;
+  padding: 48px;
+}
+
+.appoinment-content .emergency h2 {
+  color: #fff;
+}
+
+.appoinment-content .emergency i {
+  margin-right: 10px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.appoinment-form {
+  margin-top: 40px;
+}
+
+.appoinment-form .form-control {
+  background: #f4f9fc;
+  height: 55px;
+  border-color: rgba(0, 0, 0, 0.05);
+}
+
+.appoinment-form textarea.form-control {
+  height: auto;
+}
+
+section div div form a.btn {
+  display: inline-block;
+  font-size: 14px;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  letter-spacing: .5px;
+  padding: .75rem 2rem;
+  font-family: "Exo", sans-serif;
+  text-transform: uppercase;
+  border-radius: 5px;
+  border: 2px solid transparent;
+  transition: all .35s ease;
+}
+
+section div div form a.btn.btn-icon i {
+  border-left: 1px solid rgba(255, 255, 255, 0.09);
+  padding-left: 15px;
+}
+
+section div div form a.btn:focus {
+  outline: 0px;
+  box-shadow: none;
+}
+
+section div div form a.btn-main {
+  background: #223a66;
+  color: #fff;
+  border-color: #223a66;
+}
+
+section div div form a.btn-main:hover {
+  background: #e12454;
+  border-color: #e12454;
+  color: #fff;
+}
+
+
+section div div form a.btn-round-full {
+  border-radius: 50px;
+}
+
+section div div form a.btn.active:focus, .btn:active:focus, .btn:focus {
+  outline: 0;
+}
+
+.text-lg {
+  font-size: 3.75rem;
+}
+
+.text-lg {
+  font-size: 50px;
+}
+
+.gray-bg {
+  background: #f4f9fc;
+}
+
+@media (max-width: 480px) {
+  .text-lg {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 400px) {
+  .text-lg {
+    font-size: 28px;
+  }
+}
+
+.profileImage{
+  float: right;
+  padding-right: 100px;
+
+}
+
+.profileImage li{
+  border-radius: 20px;
+  text-align: center;
+  background-color: #2D2D2D;
+}
+
+.profileImage li:hover{
+  background-color: #5c5c5c;
+  transition: all .3s linear;
+}
+
+.profileName{
+  float: right; 
+  padding-top: 10px;
+  padding-left: 5px;
+}
+.preloader {
+  position: fixed; 
+  left: 0px; 
+  top: 0px; 
+  width: 100%; 
+  height: 100%; 
+  z-index: 999999; 
+  background-color: #f5f4e9; 
+  background-position: center center; 
+  background-repeat: no-repeat; 
+  background-image: url('social_media_icons/preloder/1.gif');
+}
